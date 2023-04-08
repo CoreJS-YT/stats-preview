@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+body {
+  background: #090b1a;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -12,6 +18,133 @@
 
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+.card {
+  background: #1b1938;
+  width: 320px;
+  height: 775px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 30px auto;
+}
+.card__preview {
+  width: 320px;
+  height: 235px;
+}
+.card__preview::before {
+  content: "";
+  position: absolute;
+  background: #aa5cdb;
+  width: 320px;
+  height: 235px;
+  opacity: 35%;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.card__preview__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__desc {
+  width: 320px;
+  height: 537px;
+}
+.card__desc__desc-title {
+  color: rgba(255, 255, 255, 0.7490196078);
+  font-family: "Inter", sans-serif;
+  font-size: 2em;
+  margin: 30px 15px 20px;
+  text-align: center;
+}
+.card__desc__desc-title span {
+  color: #aa5cdb;
+}
+.card__desc__description {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 25px 50px;
+  text-align: center;
+  font-size: 1em;
+}
+.card__desc__stats {
+  height: 240px;
+  width: 100px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card__desc__stats__stat {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7490196078);
+}
+.card__desc__stats__stat span {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: 1100px;
+    height: 445px;
+    margin: 120px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "desc desc prev prev";
+  }
+  .card__preview {
+    grid-area: prev;
+    width: 550px;
+    height: 445px;
+  }
+  .card__preview::before {
+    content: "";
+    position: absolute;
+    background: #aa5cdb;
+    width: 550px;
+    height: 445px;
+    opacity: 35%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+  .card__preview__image {
+    width: 550px;
+    height: 445px;
+    background-image: url(../images/image-header-desktop.jpg);
+  }
+  .card__desc {
+    grid-area: desc;
+    width: 100%;
+    height: 100%;
+  }
+  .card__desc__desc-title {
+    width: 75%;
+    text-align: left;
+    margin: 50px 50px 30px;
+    font-size: 2.5em;
+  }
+  .card__desc__description {
+    width: 75%;
+    text-align: left;
+    margin: 0 50px 80px;
+    font-size: 1.15em;
+  }
+  .card__desc__stats {
+    flex-direction: row;
+    width: 75%;
+    text-align: left;
+    margin: 50px 50px 30px;
+  }
+  .card__desc__stats__stat {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -6,4 +6,10 @@
   padding: 0;
 }
 
-@import 'Attribute';
+body {
+  background: $VeryDarkBlueMBG;
+  font-family: $FontInter;
+  font-size: 15px;
+}
+
+@import 'Attribute', 'Card', 'Medias';
